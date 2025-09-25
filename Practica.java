@@ -168,14 +168,14 @@ public class Practica {
                         break;
 
                     default:
-                        System.out.println("⚠️ Opción no válida. Intenta de nuevo.");
+                        System.out.println(" Opción no válida. Intenta de nuevo.");
                 }
 
             } catch (InputMismatchException e) {
-                System.out.println("❌ Error: Ingresa un valor válido (números enteros o decimales según corresponda).");
+                System.out.println(" Error: Ingresa un valor válido (números enteros o decimales según corresponda).");
                 sc.nextLine(); // limpiar el buffer para que no quede en bucle
             } catch (Exception e) {
-                System.out.println("❌ Ocurrió un error inesperado: " + e.getMessage());
+                System.out.println(" Ocurrió un error inesperado: " + e.getMessage());
             }
 
         } while (opcion != 0);
