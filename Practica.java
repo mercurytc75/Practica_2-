@@ -109,25 +109,25 @@ public class Practica {
                 sc.nextLine(); // limpiar buffer
 
                 switch (opcion) {
-                    case 1:
+                    case 1 -> {
                         System.out.print("Ingresa un número entero: ");
                         int num = sc.nextInt();
                         System.out.println("Cantidad de dígitos pares: " + contarDigitosPares(num));
-                        break;
+                    }
 
-                    case 2:
+                    case 2 -> {
                         System.out.print("Ingresa una cadena: ");
                         String cadena = sc.nextLine();
                         System.out.println("¿Es palíndromo? " + esPalindromo(cadena));
-                        break;
+                    }
 
-                    case 3:
+                    case 3 -> {
                         System.out.print("Ingresa un número entero: ");
                         int capicua = sc.nextInt();
                         System.out.println("¿Es capicúa? " + esCapicua(capicua));
-                        break;
+                    }
 
-                    case 4:
+                    case 4 -> {
                         System.out.print("Tamaño del arreglo: ");
                         int n = sc.nextInt();
                         float[] arr = new float[n];
@@ -138,9 +138,9 @@ public class Practica {
                         System.out.print("Número a buscar: ");
                         float x = sc.nextFloat();
                         System.out.println("Ocurrencias de " + x + ": " + contarOcurrencias(arr, x));
-                        break;
+                    }
 
-                    case 5:
+                    case 5 -> {
                         System.out.print("Tamaño del arreglo de chaquiras: ");
                         int m = sc.nextInt();
                         int[] chaquiras = new int[m];
@@ -149,9 +149,9 @@ public class Practica {
                             chaquiras[i] = sc.nextInt();
                         }
                         System.out.println("Chaquiras organizadas: " + Arrays.toString(organizarChaquiras(chaquiras)));
-                        break;
+                    }
 
-                    case 6:
+                    case 6 -> {
                         System.out.print("Número de pixeles de la imagen: ");
                         int p = sc.nextInt();
                         int[] pixeles = new int[p];
@@ -161,14 +161,11 @@ public class Practica {
                         }
                         Imagen img = new Imagen(1, p, pixeles);
                         System.out.println("Colores únicos: " + Arrays.toString(coloresUnicos(img)));
-                        break;
+                    }
 
-                    case 0:
-                        System.out.println("Saliendo del programa...");
-                        break;
+                    case 0 -> System.out.println("Saliendo del programa...");
 
-                    default:
-                        System.out.println(" Opción no válida. Intenta de nuevo.");
+                    default -> System.out.println(" Opción no válida. Intenta de nuevo.");
                 }
 
             } catch (InputMismatchException e) {
